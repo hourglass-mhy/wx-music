@@ -1,0 +1,73 @@
+<view class='container'>
+  <view class='content'>
+    <view wx:if='{{currentTab === 0}}'>
+      <find></find>
+    </view>
+    <view wx:if='{{currentTab === 1}}'>
+    	<my-video></my-video>
+    </view>
+    <view wx:if='{{currentTab === 2}}'>
+    	<mine></mine>
+    </view>
+    <view wx:if='{{currentTab === 3}}'>
+    	<friend></friend>
+    </view>
+    <view wx:if='{{currentTab === 4}}'>
+    	<account></account>
+    </view>
+  </view>
+
+  <!-- 下面的tab -->
+  <view class='bottom-tab'>
+    <view 
+      class='tab-item {{currentTab == 0 ? "active" : ""}}' 
+      data-current="0" 
+      bindtap='switchTab'>
+      <image 
+        src='{{currentTab == 0 ? "../../assets/images/search-actived.png" : "../../assets/images/search.png"}}' 
+        class='item-img'>
+      </image>
+      <text class='item-text'>发现</text>
+    </view>
+    <view 
+      class='tab-item {{currentTab == 1 ? "active" : ""}}' 
+      data-current="1" 
+      bindtap='switchTab'>
+      <image 
+        src='{{currentTab == 1 ? "../../assets/images/board-actived.png" : "../../assets/images/board.png"}}' 
+        class='item-img'>
+      </image>
+      <text class='item-text'>视频</text>
+    </view>
+    <view 
+      class='tab-item {{currentTab == 2 ? "active" : ""}}' 
+      data-current="2" 
+      bindtap='switchTab'>
+      <image 
+        src='{{currentTab == 2 ? "../../assets/images/note-actived.png" : "../../assets/images/note.png"}}' 
+        class='item-img'>
+      </image>
+      <text class='item-text'>我的</text>
+    </view>
+    <view 
+      class='tab-item {{currentTab == 3 ? "active" : ""}}' 
+      data-current="3" 
+      bindtap='switchTab'>
+      <image 
+        src='{{currentTab == 3 ? "../../assets/images/profile-actived.png" : "../../assets/images/profile.png"}}' 
+        class='item-img'>
+      </image>
+      <text class='item-text'>朋友</text>
+    </view>
+    <view 
+      class='tab-item {{currentTab == 4 ? "active" : ""}}'
+      data-current="4" 
+      bindtap='switchTab'>
+      <image 
+        src='{{currentTab == 4 ? "../../assets/images/profile-actived.png" : "../../assets/images/profile.png"}}' 
+        class='item-img'>
+      </image>
+      <text class='item-text'>账号</text>
+    </view>
+  </view>
+</view>

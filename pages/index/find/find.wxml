@@ -1,0 +1,22 @@
+<view class="container">
+  <view class='tab-wrapper'>
+    <view 
+      class='tab-left {{currentTab === 0 ? "tab-active":""}}' 
+      data-find-current="0" 
+      bindtap='switchTab'>
+      <text>个性推荐</text>
+    </view>
+    <view 
+      class='tab-right {{currentTab === 1 ? "tab-active" : ""}}'
+      data-find-current="1"
+      bindtap='switchTab'>
+      <text>主播电台</text>
+    </view>
+  </view>
+  <view class="content-wrapper" wx:if="{{ currentTab === 0 }}">
+    <recommend></recommend>
+  </view>
+  <view class="content-wrapper" wx:if="{{ currentTab === 1 }}">
+    <broadcast></broadcast>
+  </view>
+</view>

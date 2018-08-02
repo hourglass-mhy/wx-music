@@ -1,0 +1,9 @@
+{
+	"usingComponents": {
+		"find": "./find/find",
+		"myVideo": "./video/video",
+		"mine": "./mine/mine",
+		"friend": "./friend/friend",
+		"account": "./account/account"
+	}
+}

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+  	"recommend": "./recommend/recommend",
+  	"broadcast": "./broadcast/broadcast"
+  }
+}
